@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Docker Flask App</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(https://www.vertica.com/wp-content/uploads/2021/09/Docker-sorta_459893380-2500.jpg) no-repeat center center/cover;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    a {
+      font-size: 1.5rem;
+      padding: 1rem 3rem;
+      color: #f4f4f4;
+      /* text-transform: uppercase; */
+    }
+
+    .btn {
+      text-decoration: none;
+      border: 1px solid rgb(146, 148, 248);
+      position: relative;
+      overflow: hidden;
+      margin-right: 50px;
+    }
+
+    .btn:hover {
+      box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+    }
+
+    .btn:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg,
+          transparent,
+          rgba(146, 148, 248, 0.4),
+          transparent);
+      transition: all 650ms;
+    }
+
+    .btn:hover:before {
+      left: 100%;
+    }
+
+    h1 {
+      font-family: verdana;
+      position: absolute;
+      left: 600px;
+      top: 350px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="color: rgb(246, 239, 239);">Access the web server using the following endpoints:</h1>
+  <div class="container">
+    <a href="dockerfile" class="btn">/dockerfile</a>
+    <a href="dynamic" class="btn">/dynamic</a>
+    <a href="creation" class="btn">/creation</a>
+    <a href="put" class="btn">/put</a>
+    <a href="get" class="btn">/get?filename</a>
+    <a href="list" class="btn">/list - List Uploaded Files</a>
+  </div>
+</body>
+
+</html>

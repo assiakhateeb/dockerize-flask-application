@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Files</title>
+
+</head>
+
+<body>
+    <h1>Download Your Uploaded File</h1>
+    <h2>
+        Navigate to the URL: http://127.0.0.1:8080/get?filename="your_filename"
+    </h2>
+    <hr>
+    <ul>
+        {% for file in files %}
+        <li><a href="{{ url_for('download', filename=file) }}">{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
