@@ -101,4 +101,4 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8080)  # running the flask app
 
 # docker image build --build-arg CREATION_DATE="$(date)" --build-arg DYNAMIC_NUMBER="16" -t flask-app .
-# docker run -p 8080:8080 --name flask-app flask-app
+# docker run -d -p 8080:8080 --name flask-api-app flask-app

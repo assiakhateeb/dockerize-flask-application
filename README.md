@@ -27,14 +27,85 @@ In this repository, we will create a docker image that includes a simple python 
 | Flask | 
 | Docker | 
 
-## Getting started
-1. Run the following command to create the docker image from src directory.<br>
-Pass in the -t parameter to name your image flask-app. <br>
-Also, Pass in the --build-arg parameter to set the image creation time and the dynamic variable<br />
-``` docker image build --build-arg CREATION_DATE="$(date)" --build-arg DYNAMIC_NUMBER="16" -t flask-app .```
 
-<ins>Alternative:</ins><br>
-You can 
+
+## Getting started
+### Step 1: Build the docker image
+
+> Run the following command to create the docker image from src directory<br>
+Pass in the **-t** parameter to name your image flask-app. <br>
+Also, Pass in the **--build-arg** parameter to set the image creation time and the dynamic variable<br>
+
+```
+docker image build --build-arg CREATION_DATE="$(date)" --build-arg DYNAMIC_NUMBER="16" -t flask-app .
+```
+> Verify that your image shows in your image list: <br>
+
+```
+docker image ls
+```
+### Step 2: Run the docker container 
+> The **-p** flag maps a port running inside the container to your host.<br> In this case, we're mapping the Python app running on port 8080 inside the container to port 8080 on your host.<br>
+ **-d** flag means that a Docker container runs in the background of your terminal.
+
+```
+docker run -d -p 8080:8080 --name flask-api-app flask-app
+```
+### OR Pull the image from DockerHub 
+```
+docker pull assiak/flask-app
+```
+### Then run the installed image with run command
+```
+docker run -d -p 8080:8080 --name flask-api-app assiak/flask-app
+```
+https://hub.docker.com/u/assiak 
+
+### Step 3:  Access The application from the host machine
+```
+Navigate to http://127.0.0.1:8080 in a browser to see the web application.
+```
+### Tip:
+If you want to see logs from your application, you can use the `docker container logs` command.<br> By default, `docker container logs` prints out what is sent to standard out by your application.
+```
+$ docker container ls
+
+You should see your container id by running this command.
+CONTAINER ID   IMAGE              COMMAND           CREATED          STATUS          PORTS                                       NAMES
+41b0f0701dfa   assiak/flask-app   "python app.py"   21 minutes ago   Up 21 minutes   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   flask-api-app
+
+$ docker container logs flask-api-app
+
+output should be look like : * ... 
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.0.2:8080
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 205-345-037
+172.17.0.1 - - [10/Oct/2022 14:56:02] "GET /dockerfile HTTP/1.1" 200 -
+172.17.0.1 - - [10/Oct/2022 14:56:05] "GET /list HTTP/1.1" 200 -
+172.17.0.1 - - [10/Oct/2022 14:56:06] "GET /get HTTP/1.1" 200 -
+172.17.0.1 - - [10/Oct/2022 14:56:08] "GET /put HTTP/1.1" 200 -
+```
+### Step 4: Stop the docker container
+```
+docker container stop flask-api-app
+```
+### Step 5:  Remove the stopped container and remove the image
+```
+docker container rm flask-api-app
+docker image rm flask-app
+```
+#### OR:
+> Use the following command removes any stopped containers, unused volumes and networks, and dangling images.
+```
+docker system prune
+```
+
+
+Link to DockerHub: https://hub.docker.com/u/assiak 
 ## Understanding the Dockerfile
 Dockerfile consists of a set of instructions to create docker image of the application.
 ```
