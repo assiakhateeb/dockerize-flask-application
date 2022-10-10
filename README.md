@@ -12,10 +12,16 @@ In this repository, we will create a docker image that includes a simple python 
 6. **`/get?filename`** - returns a file from the lcoal store (that was uploaded previously). 
 7. **`/list`** - list all files that were uploaded previously.
 
+## DEMO:
+### Pull the image and run the docker container:
+
+https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-run-docker-container.mp4
+
+### Access the web application apis:
+
+https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-web-application.mp4
 <p align="center">
 <img src="https://www.docker.com/wp-content/uploads/2021/03/pythonwhale-1048x1024.png" width="400" height="320" /></p>
-
-
 
 ---
 <!--- BEGIN_TF_DOCS --->
@@ -109,10 +115,6 @@ docker system prune
 
 Link to DockerHub: https://hub.docker.com/u/assiak 
 
-## DEMO:
-Pull the image and run the docker container:
-
-https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-run-docker-container.mp4
 
 ## Understanding the Dockerfile
 Dockerfile consists of a set of instructions to create docker image of the application.
