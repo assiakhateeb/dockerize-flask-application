@@ -171,4 +171,3 @@ Dockerfile consists of a set of instructions to create docker image of the appli
  [Get Started with Docker](https://www.docker.com/get-started/) <br>
  [Build time arguments](https://docs.docker.com/engine/reference/builder/#arg) <br>
  [Flask Quickstart](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
- [Tutorial How To Build and Deploy a Flask Application Using Docker](https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-20-04)
