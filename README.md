@@ -95,8 +95,10 @@ docker container stop flask-api-app
 ```
 ### Step 5:  Remove the stopped container and remove the image
 ```
-docker container rm flask-api-app
-docker image rm flask-app
+$ docker container rm flask-api-app
+$ docker image rm flask-app 
+or 
+$ docker image rm assiak/flask-app 
 ```
 #### OR:
 > Use the following command removes any stopped containers, unused volumes and networks, and dangling images.
