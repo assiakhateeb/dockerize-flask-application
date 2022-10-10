@@ -54,7 +54,6 @@ def upload_file():
         file = form.file.data  # First grab the file
         # Then save the file
         file.save(os.path.join(UPLOAD_FOLDER, secure_filename(file.filename)))
-
     return render_template('upload.html', form=form)
 
 # Check if the uploads folder exist, need it to save the uploaded file.
@@ -72,7 +71,6 @@ def list_files():
         path = os.path.join(UPLOAD_FOLDER, filename)
         if os.path.isfile(path):
             uploaded_files.append(filename)
-
     return render_template('list.html', files=uploaded_files)
 
 
