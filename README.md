@@ -23,7 +23,7 @@ In this repository, we will create a docker image that includes a simple python 
 
 ### Access the web application apis:
 
-[demo-2](https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-web-application.mp4)
+[demo-2](https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-web-app.mp4)
 <p align="center">
 <img src="https://www.docker.com/wp-content/uploads/2021/03/pythonwhale-1048x1024.png" width="400" height="320" /></p>
 
