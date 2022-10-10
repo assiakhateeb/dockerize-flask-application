@@ -1,7 +1,12 @@
 # Dockerize Python Flask Web Application
 
 ## Table of Contents
-
+## Table of Contents
+- [Description](#Description)
+- [DEMO](#DEMO)
+- [Getting started](#Getting-started)
+- [Understanding the Dockerfile](#Understanding-the-Dockerfile)
+- [Useful Links](#Useful-Links)
 ## Description
 In this repository, we will create a docker image that includes a simple python flask web application that has the following apis/endpoints:
 1. **`/creation`** - provides the time the image was built.
