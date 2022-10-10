@@ -114,7 +114,6 @@ Pull the image and run the docker container.
 
 <video src="https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-run-docker-container.mp4" controls="controls" style="max-width: 730px;">
 </video>
-/home/assia/repos/webserver/demo-run-docker-container.mp4
 
 ## Understanding the Dockerfile
 Dockerfile consists of a set of instructions to create docker image of the application.
