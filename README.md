@@ -1,7 +1,6 @@
 # Dockerize Python Flask Web Application
 
 ## Table of Contents
-## Table of Contents
 - [Description](#Description)
 - [DEMO](#DEMO)
 - [Getting started](#Getting-started)
