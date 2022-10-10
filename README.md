@@ -1,5 +1,7 @@
 # Dockerize Python Flask Web Application
 
+## Table of Contents
+
 ## Description
 In this repository, we will create a docker image that includes a simple python flask web application that has the following apis/endpoints:
 1. **`/creation`** - provides the time the image was built.
@@ -25,7 +27,15 @@ In this repository, we will create a docker image that includes a simple python 
 | Flask | 
 | Docker | 
 
-# Dockerfile
+## Getting started
+1. Run the following command to create the docker image from src directory.<br>
+Pass in the -t parameter to name your image flask-app. <br>
+Also, Pass in the --build-arg parameter to set the image creation time and the dynamic variable<br />
+``` docker image build --build-arg CREATION_DATE="$(date)" --build-arg DYNAMIC_NUMBER="16" -t flask-app .```
+
+<ins>Alternative:</ins><br>
+You can 
+## Understanding the Dockerfile
 Dockerfile consists of a set of instructions to create docker image of the application.
 ```
 1. FROM python:3.7.9-alpine
