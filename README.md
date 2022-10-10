@@ -109,11 +109,11 @@ docker system prune
 
 Link to DockerHub: https://hub.docker.com/u/assiak 
 
-# DEMO:
+## DEMO:
 Pull the image and run the docker container.
-
-<video src="https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-run-docker-container.mp4" controls="controls" style="max-width: 730px;">
-</video>
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-run-docker-container.mp4)
+<!-- <video src="https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-run-docker-container.mp4" controls="controls" style="max-width: 730px;">
+</video> -->
 
 ## Understanding the Dockerfile
 Dockerfile consists of a set of instructions to create docker image of the application.
