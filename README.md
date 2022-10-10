@@ -69,7 +69,7 @@ docker pull assiak/flask-app
 ```
 docker run -d -p 8080:8080 --name flask-api-app assiak/flask-app
 ```
-https://hub.docker.com/u/assiak 
+Link to DockerHub: https://hub.docker.com/u/assiak 
 
 ### Step 3:  Access The application from the host machine
 ```
@@ -115,11 +115,6 @@ $ docker image rm assiak/flask-app
 ```
 docker system prune
 ```
-
-
-Link to DockerHub: https://hub.docker.com/u/assiak 
-
-
 ## Understanding the Dockerfile
 Dockerfile consists of a set of instructions to create docker image of the application.
 ```
