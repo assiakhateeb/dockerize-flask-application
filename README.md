@@ -111,7 +111,8 @@ Link to DockerHub: https://hub.docker.com/u/assiak
 
 # DEMO:
 Pull the image and run the docker container.
-<video src="demo-run-docker-container.mp4" controls="controls" style="max-width: 730px;">
+
+<video src="https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-run-docker-container.mp4" controls="controls" style="max-width: 730px;">
 </video>
 
 
