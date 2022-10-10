@@ -93,7 +93,6 @@ def query_example():
             path = os.path.join(UPLOAD_FOLDER, f)
             if os.path.isfile(path):
                 uploaded_files.append(f)
-
     return render_template('get_file.html', files=uploaded_files)
 
 
