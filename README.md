@@ -37,8 +37,11 @@ In this repository, we will create a docker image that includes a simple python 
 | Flask | 
 | Docker | 
 
-**What is Flask Python** <br>
-Flask is a web framework, it’s a Python module that lets you develop web applications easily.
+### What is Flask Python
+> Flask is a web framework, it’s a Python module that lets you develop web applications easily.
+
+[Tutorial How To Build and Deploy a Flask Application Using Docker](https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-20-04)
+
 
 ## Getting started
 ### Step 1: Build the docker image
