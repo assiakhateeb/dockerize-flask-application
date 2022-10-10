@@ -1,9 +1,9 @@
 # importing the required libraries
+import os
 from flask import Flask, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
 from wtforms import FileField, SubmitField
 from werkzeug.utils import secure_filename
-import os
 from wtforms.validators import InputRequired
 
 
@@ -41,12 +41,12 @@ def dockerfile_content():
         return render_template('dockerfile_content.html', text=f.read())
 
 
-# Gets a file and stores it on the image runtime
 class UploadFileForm(FlaskForm):
     file = FileField("File", validators=[InputRequired()])
     submit = SubmitField("Upload File")
 
 
+# Gets a file and stores it on the image runtime
 @app.route('/put', methods=['GET', "POST"])
 def upload_file():
     form = UploadFileForm()
@@ -57,19 +57,13 @@ def upload_file():
 
     return render_template('upload.html', form=form)
 
-
+# Check if the uploads folder exist, need it to save the uploaded file.
 def check_upload_dir():
     if not os.path.exists(UPLOAD_FOLDER):
         os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
-@app.route('/download/<path:filename>', methods=['GET'])
-def download(filename):
-    """Download a file."""
-    full_path = os.path.join(app.root_path, UPLOAD_FOLDER)
-    return send_from_directory(full_path, filename, as_attachment=True)
-
-
+# List the already uploaded files 
 @app.route('/list', methods=['GET'])
 def list_files():
     """Endpoint to list files."""
@@ -82,9 +76,16 @@ def list_files():
     return render_template('list.html', files=uploaded_files)
 
 
+#  Downloading the file as an attachment in the browser
+@app.route('/download/<path:filename>', methods=['GET'])
+def download(filename):
+    """Download a file."""
+    full_path = os.path.join(app.root_path, UPLOAD_FOLDER)
+    return send_from_directory(full_path, filename, as_attachment=True)
+
+# Returns a file from the lcoal store (that was uploaded previously).
 @app.route('/get')
 def query_example():
-    # if key doesn't exist, returns None
     filename = request.args.get('filename')
     uploaded_files = []
     for f in os.listdir(UPLOAD_FOLDER):
@@ -99,6 +100,3 @@ def query_example():
 if __name__ == '__main__':
     check_upload_dir()
     app.run(debug=True, host='0.0.0.0', port=8080)  # running the flask app
-
-# docker image build --build-arg CREATION_DATE="$(date)" --build-arg DYNAMIC_NUMBER="16" -t flask-app .
-# docker run -d -p 8080:8080 --name flask-api-app flask-app
