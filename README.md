@@ -1,7 +1,7 @@
 # Dockerize Python Flask Web Application
 
 ## Table of Contents
-- [Description](#Description)
+-[Description](#Description)
 - [DEMO](#DEMO)
 - [Getting started](#Getting-started)
 - [Understanding the Dockerfile](#Understanding-the-Dockerfile)
@@ -19,11 +19,11 @@ In this repository, we will create a docker image that includes a simple python 
 ## DEMO:
 ### Pull the image and run the docker container:
 
-https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-run-docker-container.mp4
+[demo-1](https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-run-docker-container.mp4)
 
 ### Access the web application apis:
 
-https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-web-application.mp4
+[demo-2](https://github.com/assiakhateeb/dockerize-flask-application/blob/master/demo-web-application.mp4)
 <p align="center">
 <img src="https://www.docker.com/wp-content/uploads/2021/03/pythonwhale-1048x1024.png" width="400" height="320" /></p>
 
