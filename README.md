@@ -136,7 +136,7 @@ Dockerfile consists of a set of instructions to create docker image of the appli
 **Line by line description:** <br>
 <!-- -->
 ```1. FROM python:3.7.9-alpine ``` <br />
-> FROM allows us to initialize the build over a base image. In our case, we are using a python:3.7.9-alpine image. (Alpine is a small Linux Distribution (~ 5MB).) In short, we are using a Linux environment with python 3.6.5 for our app.<br />
+> FROM allows us to initialize the build over a base image. In our case, we are using a python:3.7.9-alpine image. (Alpine is a small Linux Distribution (~ 5MB).) In short, we are using a Linux environment with python 3.7.9 for our app.<br />
 
 ```2. ARG CREATION_DATE ``` <br />
 > Defines the image creation date variable. we'll set it during build using the --build-arg flag.<br />
