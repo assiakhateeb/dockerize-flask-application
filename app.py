@@ -8,7 +8,7 @@ from wtforms.validators import InputRequired
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'supersecretkey'
+app.config['SECRET_KEY'] = 'supersecretkey' # In order to use session in flask you need to set the secret key in your application settings. 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
 
 
